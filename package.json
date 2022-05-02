@@ -1,0 +1,20 @@
+{
+  "name": "wakatime-telegram",
+  "version": "1.0.0",
+  "description": "weekly stats from wakatime to telegram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot",
+    "nodejs",
+    "telegram"
+  ],
+  "author": "waaeel",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-telegram-bot-api": "^0.40.0",
+    "request": "^2.88.2"
+  }
+}
