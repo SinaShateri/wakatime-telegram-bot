@@ -1,4 +1,5 @@
-![alt text](https://github.com/waaeel/wakatime-telegram-bot/blob/master/screenshot.png?raw=true)
+![alt text](https://github.com/waaeel/wakatime-telegram-bot/blob/main/screenshot.png?raw=true)
+
 ## 📖 Usage
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
