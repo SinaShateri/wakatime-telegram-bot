@@ -59,10 +59,10 @@ We highly recommend to read through the [Using Github Actions](https://docs.gith
 
 More documention for troubleshooting [CRON FORMAT](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows)
 
-      ```yaml
-        schedule:
-          - cron: '20 16 * * 0' #every sunday at 4:20pm
-      ```
+```yaml
+schedule:
+  - cron: "20 16 * * 0" #every sunday at 4:20pm
+```
 
 2. Adding API Tokens and Secrets into the repository
 
