@@ -32,7 +32,7 @@ $ npm install
 2. Inside the `.env` file, add key `WAKATIME_API_KEY` obtained from [Wakatime Settings](https://wakatime.com/api-key). One must create an account and copy the API Key.
 
    ```javascript
-   WAKATIME_API_KEY = "YOUR OPEN WAKATIME API TOKEN HERE";
+   WAKATIME_API_KEY = "YOUR WAKATIME API TOKEN HERE";
    ```
 
 3. Inside the `.env` file, add key `TELEGRAM_TOKEN` and `TELEGRAM_CHAT_ID` obtained from [Telegram Bots App](https://core.telegram.org/bots). Follow the below steps:
