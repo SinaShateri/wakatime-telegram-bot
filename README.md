@@ -1,4 +1,4 @@
-![alt text](https://github.com/waaeel/wakatime-telegram-bot/blob/main/screenshot.png?raw=true)
+![screenshot](https://github.com/waaeel/wakatime-telegram-bot/blob/main/screenshot.png?raw=true)
 
 ## 📖 Usage
 
