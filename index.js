@@ -29,28 +29,26 @@ mondayString = monday.toISOString();
 startDate = mondayString.split("T");
 endDate = todayString.split("T");
 
-wakaURL = "https://wakatime.com/api/v1/users/current/summaries?";
-range = "start=" + startDate[0] + "&end=" + endDate[0] + "&";
-apiKey = "api_key=" + wakatimeApiKey;
+wakaURL = `https://wakatime.com/api/v1/users/current/summaries?start=${startDate[0]}&end=${endDate[0]}&api_key=${wakatimeApiKey}`;
 
 const main = async () => {
-  request(wakaURL + range + apiKey, function (err, res, body) {
+  request(wakaURL, function (err, res, body) {
     jsonBody = JSON.parse(body);
-    // customize text format as you like
-    bot.sendMessage(
-      bot_id,
-      `W${weekNumber()} :: TOTAL :: ${jsonBody.cummulative_total.text} `
-    );
-    if (jsonBody.data[1])
-      for (project in jsonBody.data[1].projects) {
-        projectName = jsonBody.data[1].projects[project].name;
-        time = jsonBody.data[1].projects[project].text;
-        // customize text format as you like
-        bot.sendMessage(
-          bot_id,
-          `W${weekNumber()} :: ${projectName} :: ${time} `
-        );
-      }
+    bot
+      .sendMessage(
+        bot_id,
+        `W${weekNumber()} :: TOTAL :: ${jsonBody.data[0].grand_total.text} `
+      )
+      .then(() => {
+        for (project in jsonBody.data[0].projects) {
+          projectName = jsonBody.data[0].projects[project].name;
+          time = jsonBody.data[0].projects[project].text;
+          bot.sendMessage(
+            bot_id,
+            `W${weekNumber()} :: ${projectName} :: ${time} `
+          );
+        }
+      });
   });
 };
 main();
