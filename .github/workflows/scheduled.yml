@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "15 23 * * 0" #every sunday
+    - cron: '20 16 * * 0' #every sunday
 
 jobs:
   run_weather_bot:
